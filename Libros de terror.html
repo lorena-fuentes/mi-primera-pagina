@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LIBROS DE TERROR</title>
+    <link rel="icon" type="image/x-icon" href="assets/HTML ICON.png" />
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #1c1c1c;
+            color: #f0f0f0;
+            margin: 0;
+            padding: 20px;
+        }
+        h1 {
+            text-align: center;
+            color:  #00f8f4;
+        }
+        .book {
+            background-color: #333;
+            padding: 10px;
+            margin: 15px 0;
+            border-radius: 5px;
+        }
+        .button {
+            background-color: #6124ed;
+            border: none;
+            color: white;
+            padding: 10px 15px;
+            text-align: center;
+            font-size: 16px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .button:hover {
+            background-color:  #00f8f4;
+        }
+        #book-info {
+            display: none;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: #222;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+        }
+        #book-info p {
+            margin: 0 0 15px;
+        }
+        .close-button {
+            background-color: #6124ed;
+            border: none;
+            color: white;
+            padding: 10px;
+            border-radius: 5px;
+            cursor: pointer;
+            display: block;
+            margin: 0 auto;
+        }
+    </style>
+</head>
+<body>
+    <h1>LIBROS DE TERROR</h1>
+    <h2>A continuaci&oacute;n se le presentar&aacute;n los libros disponibles basados en Terror.</h2>
+
+    <div class="book">
+        <h2>ATRAPADOS EN LA OSCURIDAD</h2>
+        <img class="img-fluid d-block mx-auto" src="assets/LIBROS DE TERROR/Atrapados en la Oscuridad.jpeg" alt="..." />
+        <button class="button" onclick="showInfo('ATRAPADOS EN LA OSCURIDAD','Jos&eacute; Luis Velasco','Juan es un investigador que se encuentra trabajando en un caso aparentemente normal, pero pronto descubre que hay algo m&aacute;s oscuro detr&aacute;s de todo. Cuando su hermana Laura desaparece misteriosamente, Juan se da cuenta de que est&aacute; atrapado en una red de secretos y conspiraciones que amenaza su vida y la de sus seres queridos.')">Ver Informaci&oacute;n</button>
+    </div>
+
+    <div class="book">
+        <h2>D&Eacute;JAME ENTRAR</h2>
+        <img class="img-fluid d-block mx-auto" src="assets/LIBROS DE TERROR/Dejame entrar.jpeg" alt="..." />
+        <button class="button" onclick="showInfo('D&Eacute;JAME ENTRAR', 'John Ajvide Lindqvist','Oskar es un niño que no tiene amigos y sus compañeros de clase se mofan de &eacute;l y le maltratan. Una noche conoce a Eli, su nueva vecina, una misteriosa niña que nunca tiene fr&iacute;o, despide un olor extraño y suele ir acompañada de un hombre de aspecto siniestro. Oskar se siente fascinado por Eli y se hacen inseparables. Al mismo tiempo, una serie de cr&iacute;menes y sucesos extraños hace sospechar a la polic&iacute;a local de la presencia de un asesino en serie. Nada m&aacute;s lejos de la realidad.')">Ver Informaci&oacute;n</button>
+    </div>
+
+    <div class="book">
+        <h2>STEPHEN KING</h2>
+        <img class="img-fluid d-block mx-auto" src="assets/LIBROS DE TERROR/KING.jpeg" alt="..." />
+        <button class="button" onclick="showInfo('STEPHEN KING', 'Stephen Edwin King', 'Tras veintisiete años de tranquilidad y lejan&iacute;a una antigua promesa infantil les hace volver al lugar en el que vivieron su infancia y juventud como una terrible pesadilla. Regresan a Derry para enfrentarse con su pasado y enterrar definitivamente la amenaza que los amarg&oacute; durante su niñez. Saben que pueden morir, pero son conscientes de que no conocer&aacute;n la paz hasta que aquella cosa sea destruida para siempre.')">Ver Informaci&oacute;n</button>
+    </div>
+
+    <div class="book">
+        <h2>EL EXORCISTA</h2>
+        <img class="img-fluid d-block mx-auto" src="assets/LIBROS DE TERROR/El exorcista.jpeg" alt="..." />
+        <button class="button" onclick="showInfo('EL EXORCISTA', 'William Peter Blatty', 'Nos adentramos en la vida de Chris MacNeil, una exitosa actriz que vive con su hija Regan en una lujosa casa en Georgetown. Todo parece ir bien hasta que Regan comienza a mostrar comportamientos extraños y violentos. Chris, desesperada por encontrar una explicaci&oacute;n, busca ayuda m&eacute;dica, pero ninguna respuesta parece satisfactoria.')">Ver Informaci&oacute;n</button>
+    </div>
+
+    <div class="book">
+        <h2>CORALINE</h2>
+        <img class="img-fluid d-block mx-auto" src="assets/LIBROS DE TERROR/Coraline.jpeg" alt="..." />
+        <button class="button" onclick="showInfo('CORALINE', 'Neil Gaiman', 'Pronto Coraline se da cuenta de que, tras los espejos, hay otros niños que han ca&iacute;do en la trampa. Son como almas perdidas, y ahora ella es su &uacute;nica esperanza de salvaci&oacute;n. Pero para rescatarlos tendr&aacute; tambi&eacute;n que recuperar a sus verdaderos padres, y cumplir as&iacute; el desaf&iacute;o que le permitir&aacute; volver a su vida anterior.')">Ver Informaci&oacute;n</button>
+    </div>
+
+    <div class="book">
+        <h2>DESDE EL INFIERNO</h2>
+        <img class="img-fluid d-block mx-auto" src="assets/LIBROS DE TERROR/Libro de terror DESDE.jpeg" alt="..." />
+        <button class="button" onclick="showInfo('DESDE EL INFIERNO', 'Enrique Laso', 'Tras una terrible p&eacute;rdida, Carlos se ver&aacute; arrastrado hacia un mundo desconocido en el que nada es lo que parece. Con un vertiginoso pulso narrativo. Desde el infierno mantendr&aacute; al lector en vilo hasta el final.')">Ver Informaci&oacute;n</button>
+    </div>
+
+    <div id="book-info">
+        <h2 id="book-title"></h2>
+        <p id="book-author"></p>
+        <p id="book-description"></p>
+        <button class="close-button" onclick="closeInfo()">Cerrar</button>
+    </div>
+
+    <script>
+        function showInfo(title, author, description) {
+            document.getElementById('book-title').innerText = title;
+            document.getElementById('book-author').innerText = 'Autor: ' + author;
+            document.getElementById('book-description').innerText = description;
+            document.getElementById('book-info').style.display = 'block';
+        }
+
+        function closeInfo() {
+            document.getElementById('book-info').style.display = 'none';
+        }
+    </script>
+</body>
+</html>

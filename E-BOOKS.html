@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-BOOKS</title>
+    <link rel="icon" type="image/x-icon" href="assets/HTML ICON.png" />
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #1c1c1c;
+            color: #f0f0f0;
+            margin: 0;
+            padding: 20px;
+        }
+        h1 {
+            text-align: center;
+            color:  #00f8f4;
+        }
+        .book {
+            background-color: #333;
+            padding: 10px;
+            margin: 15px 0;
+            border-radius: 5px;
+        }
+        .button {
+            background-color: #6124ed;
+            border: none;
+            color: white;
+            padding: 10px 15px;
+            text-align: center;
+            font-size: 16px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .button:hover {
+            background-color:  #00f8f4;
+        }
+        #book-info {
+            display: none;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: #222;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+        }
+        #book-info p {
+            margin: 0 0 15px;
+        }
+        .close-button {
+            background-color: #6124ed;
+            border: none;
+            color: white;
+            padding: 10px;
+            border-radius: 5px;
+            cursor: pointer;
+            display: block;
+            margin: 0 auto;
+        }
+    </style>
+</head>
+<body>
+    <h1>E-BOOKS</h1>
+    <h2>A continuaci&oacute;n se le presentar&aacute;n los libros disponibles basados en E-books</h2>
+
+    <div class="book">
+        <h2>EL PRINCIPITO</h2>
+        <img class="img-fluid d-block mx-auto" src="assets/E-BOOKS/EL PRINCIPITO.jpeg" alt="..." />
+        <button class="button" onclick="showInfo('EL PRINCIPITO','Antoine de Saint-Exup&eacute;ry.','En la Tierra, entrar&aacute; en contacto con animales, flores y personas. Ser&aacute; all&iacute; donde, antes de encontrar al piloto, conocer&aacute; al zorro, quien le revelar&aacute; la importancia de la amistad y el valor del amor que siente hacia su flor. Ser&aacute; la nostalgia por ella y la decepci&oacute;n que le causa el mundo de los adultos lo que lo motivar&aacute; a regresar a su planeta.')">Ver Informaci&oacute;n</button>
+    </div>
+
+    <div class="book">
+        <h2>EL REINO DE LAS HADAS</h2>
+        <img class="img-fluid d-block mx-auto" src="assets/E-BOOKS/EL REINO DE LAS HADAS.jpeg" alt="..." />
+        <button class="button" onclick="showInfo('EL REINO DE LAS HADAS', 'Señorita Yuuki','Para Melody Lewis, la palabra delicada no iba con ella. Su comportamiento le hac&iacute;a vestirse de modo masculino. Su vida dio vuelta, al encontrarse con un chico herido en un callej&oacute;n. Sin pensarlo dos veces, lo llev&oacute; a su casa, dandole una hospedaje.')">Ver Informaci&oacute;n</button>
+    </div>
+
+    <div class="book">
+        <h2>LÁGRIMAS DE SANGRE</h2>
+        <img class="img-fluid d-block mx-auto" src="assets/E-BOOKS/Lágrimas de Sangre.jpeg" alt="..." />
+        <button class="button" onclick="showInfo('L&Aacute;GRIMAS DE SANGRE', 'Ari del Rey', 'Fabra Marcelo descubre esa noche a su madre maltrecha por una paliza m&aacute;s de su padre. Decide que esa va a ser la &uacute;ltima y sale a buscarlo para matarlo. Con su moto empieza un periplo por la ciudad nocturna, llena de vida y colegas, que le har&aacute;n meditar acerca de muchas cosas.')">Ver Informaci&oacute;n</button>
+    </div>
+
+    <div class="book">
+        <h2>ALICIA EN EL PA&Iacute;S DE LAS MARAVILLAS</h2>
+        <img class="img-fluid d-block mx-auto" src="assets/E-BOOKS/ALICIA.jpeg" alt="..." />
+        <button class="button" onclick="showInfo('ALICIA EN EL PA&Iacute;S DE LAS MARAVILLAS', 'R&eacute;becca Dautremer', 'Alicia en el Pa&iacute;s de las Maravillas es un cuento en el que Alicia vive aventuras de cambio de tamaño y encuentros peculiares en el Pa&iacute;s de las Maravillas. En un c&aacute;lido d&iacute;a de verano, Alicia se encontraba sentada a la orilla de un r&iacute;o.')">Ver Informaci&oacute;n</button>
+    </div>
+
+    <div class="book">
+        <h2>BAJO LA MISMA ESTRELLA</h2>
+        <img class="img-fluid d-block mx-auto" src="assets/E-BOOKS/Bajo la misma estrella.jpeg" alt="..." />
+        <button class="button" onclick="showInfo('BAJO LA MISMA ESTRELLA', 'John Green', 'Hazel Grace Lancaster es una adolescente de 16 años que tiene c&aacute;ncer terminal. Ella sabe que est&aacute; muriendo ya que pasa su vida pegada a un tanque de ox&iacute;geno y sometida a constantes tratamientos, lo que la llevan entrar en una depresi&oacute;n. Para conseguir animarla, sus padres le recomiendan asistir a un grupo de apoyo.')">Ver Informaci&oacute;n</button>
+    </div>
+
+    <div class="book">
+        <h2>HARRY POTTER Y LA PIEDRA FILOSOFAL</h2>
+        <img class="img-fluid d-block mx-auto" src="assets/E-BOOKS/HARRY POTTER.jpeg" alt="..." />
+        <button class="button" onclick="showInfo('HARRY POTTER Y LA PIEDRA FILOSOFAL', 'J.K Rowling', 'Sigue la historia de Harry, un niño hu&eacute;rfano que descubre que es un mago el d&iacute;a de su cumpleaños n&uacute;mero 11. Asiste al Colegio Hogwarts de Magia y Hechicer&iacute;a, donde hace amigos como Ron Weasley y Hermione Granger. Juntos descubren los secretos de la Piedra Filosofal, un objeto m&aacute;gico que otorga inmortalidad. Mientras Harry enfrenta al malvado mago Lord Voldemort, responsable de la muerte de sus padres, descubre su propio poder y su lugar en el mundo m&aacute;gico.')">Ver Informaci&oacute;n</button>
+    </div>
+
+    <div id="book-info">
+        <h2 id="book-title"></h2>
+        <p id="book-author"></p>
+        <p id="book-description"></p>
+        <button class="close-button" onclick="closeInfo()">Cerrar</button>
+    </div>
+
+    <script>
+        function showInfo(title, author, description) {
+            document.getElementById('book-title').innerText = title;
+            document.getElementById('book-author').innerText = 'Autor: ' + author;
+            document.getElementById('book-description').innerText = description;
+            document.getElementById('book-info').style.display = 'block';
+        }
+
+        function closeInfo() {
+            document.getElementById('book-info').style.display = 'none';
+        }
+    </script>
+</body>
+</html>

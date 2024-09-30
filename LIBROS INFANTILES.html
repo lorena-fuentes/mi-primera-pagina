@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LIBROS INFANTILES</title>
+    <link rel="icon" type="image/x-icon" href="assets/HTML ICON.png" />
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #1c1c1c;
+            color: #f0f0f0;
+            margin: 0;
+            padding: 20px;
+        }
+        h1 {
+            text-align: center;
+            color:  #00f8f4;
+        }
+        .book {
+            background-color: #333;
+            padding: 10px;
+            margin: 15px 0;
+            border-radius: 5px;
+        }
+        .button {
+            background-color: #6124ed;
+            border: none;
+            color: white;
+            padding: 10px 15px;
+            text-align: center;
+            font-size: 16px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .button:hover {
+            background-color:  #00f8f4;
+        }
+        #book-info {
+            display: none;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: #222;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+        }
+        #book-info p {
+            margin: 0 0 15px;
+        }
+        .close-button {
+            background-color: #6124ed;
+            border: none;
+            color: white;
+            padding: 10px;
+            border-radius: 5px;
+            cursor: pointer;
+            display: block;
+            margin: 0 auto;
+        }
+    </style>
+</head>
+<body>
+    <h1>LIBROS INFANTILES</h1>
+    <h2>A continuaci&oacute;n se le presentar&aacute;n los libros disponibles basados en libros infantiles, en esta secci&oacute;n van incluidos cuentos muy entretenidos para niños y niñas.</h2>
+
+    <div class="book">
+        <h2>LA BELLA Y LA BESTIA</h2>
+        <img class="img-fluid d-block mx-auto" src="assets/LIBROS INFANTILES/La bella y la bestia.jpeg" alt="..." />
+        <button class="button" onclick="showInfo('LA BELLA Y LA BESTIA','Gabrielle-Suzanne Barbot de Villeneuve.','La Bella y la Bestia es un cuento sobre una joven llamada Bella, quien se ofrece para vivir en el castillo de una Bestia a cambio de la libertad de su padre. Aunque al principio tiene miedo de la Bestia por su apariencia feroz, con el tiempo descubre su bondad interior. A medida que se conocen, Bella se enamora de &eacute;l, lo que rompe el hechizo que lo hab&iacute;a transformado en una bestia, revelando que en realidad es un pr&iacute;ncipe. El cuento enseña que la verdadera belleza est&aacute; en el interior.')">Ver Informaci&oacute;n</button>
+    </div>
+
+    <div class="book">
+        <h2>LOS TRES CERDITOS</h2>
+        <img class="img-fluid d-block mx-auto" src="assets/LIBROS INFANTILES/LOS 3 CERDITOS.jpeg" alt="..." />
+        <button class="button" onclick="showInfo('LOS TRES CERDITOS', 'Joseph Jacobs','Los tres cerditos es un cuento sobre tres hermanos cerditos que construyen casas para protegerse del lobo. El primero hace su casa de paja, el segundo de madera y el tercero de ladrillo. El lobo sopla y destruye f&aacute;cilmente las dos primeras casas, pero no logra derribar la casa de ladrillo. Los dos cerditos que hicieron casas fr&aacute;giles se refugian con su hermano, y gracias a su trabajo duro y planificaci&oacute;n, logran escapar del lobo. El cuento enseña la importancia de la dedicaci&oacute;n y la previsi&oacute;n.')">Ver Informaci&oacute;n</button>
+    </div>
+
+    <div class="book">
+        <h2>RICITOS DE ORO Y LOS 3 OSITOS</h2>
+        <img class="img-fluid d-block mx-auto" src="assets/LIBROS INFANTILES/RICITOS DE ORO.jpeg" alt="..." />
+        <button class="button" onclick="showInfo('RICITOS DE ORO Y LOS 3 OSITOS', 'ROBERT SOUTHEY', 'Ricitos de Oro y los tres osos cuenta la historia de una niña llamada Ricitos de Oro que entra en la casa de tres osos mientras ellos est&aacute;n fuera. En su curiosidad, prueba su comida, se sienta en sus sillas y finalmente se queda dormida en una de sus camas. Cuando los osos regresan, descubren lo que Ricitos de Oro ha hecho. Asustada al verlos, ella huye. La historia enseña sobre el respeto por las pertenencias ajenas y las consecuencias de la imprudencia.')">Ver Informaci&oacute;n</button>
+    </div>
+
+    <div class="book">
+        <h2>PINOCHO</h2>
+        <img class="img-fluid d-block mx-auto" src="assets/LIBROS INFANTILES/PINOCHO.jpeg" alt="..." />
+        <button class="button" onclick="showInfo('PINOCHO', 'Carlo Collodi', 'Pinocho es la historia de un muñeco de madera creado por un carpintero llamado Gepetto. Un hada le da vida a Pinocho, quien sueña con convertirse en un niño de verdad, pero primero debe demostrar ser valiente, honesto y generoso. A lo largo de su aventura, Pinocho enfrenta muchas tentaciones y desaf&iacute;os, como mentir, lo que hace que su nariz crezca. Con la ayuda del Hada Azul y su conciencia, el Grillo Parlante, aprende lecciones importantes sobre la responsabilidad. Al final, su bondad y arrepentimiento lo transforman en un niño real.')">Ver Informaci&oacute;n</button>
+    </div>
+
+    <div class="book">
+        <h2>PATITO FEO</h2>
+        <img class="img-fluid d-block mx-auto" src="assets/LIBROS INFANTILES/Patito feo.jpeg" alt="..." />
+        <button class="button" onclick="showInfo('PATITO FEO', 'Hans Christian Andersen', 'El patito feo cuenta la historia de un pequeño ave que nace diferente de los dem&aacute;s patitos. Es ridiculizado y rechazado por su apariencia. Triste y solitario, el patito huye y pasa un tiempo vagando solo. Despu&eacute;s de muchas dificultades, un d&iacute;a se encuentra con unos cisnes y descubre que &eacute;l tambi&eacute;n es uno de ellos. Se transforma en un hermoso cisne, reconocido por su belleza. El cuento enseña que la verdadera identidad y belleza pueden revelarse con el tiempo, y que las diferencias no deben ser motivo de rechazo.')">Ver Informaci&oacute;n</button>
+    </div>
+
+    <div class="book">
+        <h2>VIAJE AL CIELO</h2>
+        <img class="img-fluid d-block mx-auto" src="assets/LIBROS INFANTILES/Viaje al cielo.jpeg" alt="..." />
+        <button class="button" onclick="showInfo('VIAJE AL CIELO', 'Mauricio Caviedes', 'El viaje al cielo es un cuento que narra la historia de un hombre curioso que decide visitar el cielo. A trav&eacute;s de su traves&iacute;a, se encuentra con personajes celestiales y experimenta momentos m&aacute;gicos que lo llenan de asombro. Durante el viaje, descubre paisajes maravillosos y comprende importantes lecciones sobre la vida, el valor de las buenas acciones y la recompensa que espera en el m&aacute;s all&aacute; para aquellos que han vivido con bondad y generosidad. Al final, regresa a la Tierra transformado y con una nueva perspectiva sobre el mundo y su prop&oacute;sito en &eacute;l.')">Ver Informaci&acute;n</button>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Librer&iacute;a De Todo Un Poco. Todos los derechos reservados :).</p>
+    </footer>
+
+    <div id="book-info">
+        <h2 id="book-title"></h2>
+        <p id="book-author"></p>
+        <p id="book-description"></p>
+        <button class="close-button" onclick="closeInfo()">Cerrar</button>
+    </div>
+
+    <script>
+        function showInfo(title, author, description) {
+            document.getElementById('book-title').innerText = title;
+            document.getElementById('book-author').innerText = 'Autor: ' + author;
+            document.getElementById('book-description').innerText = description;
+            document.getElementById('book-info').style.display = 'block';
+        }
+
+        function closeInfo() {
+            document.getElementById('book-info').style.display = 'none';
+        }
+    </script>
+</body>
+</html>

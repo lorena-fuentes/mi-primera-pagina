@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CUADERNOS</title>
+    <link rel="icon" type="image/x-icon" href="assets/HTML ICON.png" />
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #1c1c1c;
+            color: #f0f0f0;
+            margin: 0;
+            padding: 20px;
+        }
+        h1 {
+            text-align: center;
+            color:  #00f8f4;
+        }
+        .book {
+            background-color: #333;
+            padding: 10px;
+            margin: 15px 0;
+            border-radius: 5px;
+        }
+        .button {
+            background-color: #6124ed;
+            border: none;
+            color: white;
+            padding: 10px 15px;
+            text-align: center;
+            font-size: 16px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .button:hover {
+            background-color:  #00f8f4;
+        }
+        #book-info {
+            display: none;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: #222;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+        }
+        #book-info p {
+            margin: 0 0 15px;
+        }
+        .close-button {
+            background-color: #6124ed;
+            border: none;
+            color: white;
+            padding: 10px;
+            border-radius: 5px;
+            cursor: pointer;
+            display: block;
+            margin: 0 auto;
+        }
+    </style>
+</head>
+<body>
+    <h1>CUADERNOS</h1>
+    <h2>¡Encuentra el cuaderno perfecto para tus necesidades!</h2>
+
+    <div class="book">
+        <h2>CUADERNO DE RAYAS O L&Iacute;NEAS</h2>
+        <img class="img-fluid d-block mx-auto" src="assets/cuadernos/cuaderno_rayas.jpeg" alt="..." />
+        <button class="button" onclick="showInfo('CUADERNO DE RAYAS O L&Iacute;NEAS','En Librer&iacute;a De Todo Un Poco','Perfecto para tomar apuntes en clases o reuniones. Las l&Iacute;neas te ayudan a mantener la escritura ordenada.')">Ver Informaci&oacute;n</button>
+    </div>
+
+    <div class="book">
+        <h2>CUADERNO CUADRICULADO</h2>
+        <img class="img-fluid d-block mx-auto" src="assets/cuadernos/cuaderno_cuadros.jpeg" alt="..." />
+        <button class="button" onclick="showInfo('CUADERNO CUADRICULADO','En Librer&iacute;a De Todo Un Poco','Ideal para matem&aacute;ticas, gr&aacute;ficas o para quienes prefieren m&aacute;s estructura al escribir.')">Ver Informaci&oacute;n</button>
+    </div>
+
+    <div class="book">
+        <h2>CUADERNO EN BLANCO</h2>
+        <img class="img-fluid d-block mx-auto" src="assets/cuadernos/cuaderno_blanco.jpeg" alt="..." />
+        <button class="button" onclick="showInfo('CUADERNO EN BLANCO', 'En Librer&iacute;a De Todo Un Poco', 'Cuaderno sin l&iacute;neas ni cuadriculado, perfecto para artistas, dibujantes y creativos.')">Ver Informaci&oacute;n</button>
+    </div>
+
+    <div class="book">
+        <h2>CUADERNO DE PUNTOS</h2>
+        <img class="img-fluid d-block mx-auto" src="assets/cuadernos/cuaderno_puntos.jpeg" alt="..." />
+        <button class="button" onclick="showInfo('CUADERNO DE PUNTOS', 'En Librer&iacute;a De Todo Un Poco', 'El equilibrio perfecto entre libertad y estructura. Ideal para bullet journals y planificaci&oacute;n visual.')">Ver Informaci&oacute;n</button>
+    </div>
+
+    <div class="book">
+        <h2>CUADERNO COSIDO PORTADA LISA</h2>
+        <img class="img-fluid d-block mx-auto" src="assets/cuadernos/Cosido_liso.jpeg" alt="..." />
+        <button class="button" onclick="showInfo('CUADERNO COSIDO PORTADA LISA', 'En Librer&iacute;a De Todo Un Poco', 'Duradero y resistente, ideal para uso diario. Su portada lisa permite personalizaci&oacute;n, y el encuadernado cosido garantiza mayor estabilidad en el tiempo.')">Ver Informaci&oacute;n</button>
+    </div>
+
+    <div class="book">
+        <h2>CUADERNO COSIDO PORTADA ANIMADA</h2>
+        <img class="img-fluid d-block mx-auto" src="assets/cuadernos/Cocidos_figura.jpeg" alt="..." />
+        <button class="button" onclick="showInfo('CUADERNO COSIDO PORTADA ANIMADA', 'En Librer&iacute;a De Todo Un Poco', 'Cuadernos resistentes con un encuadernado cosido que garantiza durabilidad. Sus portadas animadas y coloridas los hacen ideales para quienes buscan creatividad y estilo en sus apuntes.')">Ver Informaci&oacute;n</button>
+    </div>
+
+    <div id="book-info">
+        <h2 id="book-title"></h2>
+        <p id="book-author"></p>
+        <p id="book-description"></p>
+        <button class="close-button" onclick="closeInfo()">Cerrar</button>
+    </div>
+
+    <script>
+        function showInfo(title, author, description) {
+            document.getElementById('book-title').innerText = title;
+            document.getElementById('book-author').innerText = 'Autor: ' + author;
+            document.getElementById('book-description').innerText = description;
+            document.getElementById('book-info').style.display = 'block';
+        }
+
+        function closeInfo() {
+            document.getElementById('book-info').style.display = 'none';
+        }
+    </script>
+</body>
+</html>

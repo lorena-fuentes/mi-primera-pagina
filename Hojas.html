@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HOJAS</title>
+    <link rel="icon" type="image/x-icon" href="assets/HTML ICON.png" />
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #1c1c1c;
+            color: #f0f0f0;
+            margin: 0;
+            padding: 20px;
+        }
+        h1 {
+            text-align: center;
+            color:  #00f8f4;
+        }
+        .book {
+            background-color: #333;
+            padding: 10px;
+            margin: 15px 0;
+            border-radius: 5px;
+        }
+        .button {
+            background-color: #6124ed;
+            border: none;
+            color: white;
+            padding: 10px 15px;
+            text-align: center;
+            font-size: 16px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .button:hover {
+            background-color:  #00f8f4;
+        }
+        #book-info {
+            display: none;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: #222;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+        }
+        #book-info p {
+            margin: 0 0 15px;
+        }
+        .close-button {
+            background-color: #6124ed;
+            border: none;
+            color: white;
+            padding: 10px;
+            border-radius: 5px;
+            cursor: pointer;
+            display: block;
+            margin: 0 auto;
+        }
+    </style>
+</head>
+<body>
+    <h1>HOJAS</h1>
+    <h2>A continuaci&oacute;n encontrar&aacute;n los diferentes tipos de hojas que les ofrecemos.</h2>
+
+    <div class="book">
+        <h2>HOJAS IRIS</h2>
+        <img class="img-fluid d-block mx-auto" src="assets/HOJAS/Hojas Iris.jpeg" alt="..." />
+        <button class="button" onclick="showInfo('HOJAS IRIS','En Librer&iacute;a De Todo Un Poco','Las hojas Iris son un tipo de papel fino, transl&uacute;cido y de colores suaves, com&uacute;nmente utilizado para manualidades, envolturas decorativas y detalles en papeler&iacute;a art&iacute;stica. Su textura delicada lo hace ideal para proyectos creativos que requieren un toque ligero y colorido.')">Ver Informaci&oacute;n</button>
+    </div>
+
+    <div class="book">
+        <h2>HOJAS CON L&Iacute;NEAS</h2>
+        <img class="img-fluid d-block mx-auto" src="assets/HOJAS/Hojas líneas.jpeg" alt="..." />
+        <button class="button" onclick="showInfo('HOJAS CON L&Iacute;NEAS', 'En Librer&iacute;a De Todo Un Poco','Las hojas con l&iacute;neas son hojas de papel con rayas horizontales impresas, diseñadas para facilitar la escritura ordenada y alineada..')">Ver Informaci&oacute;n</button>
+    </div>
+
+    <div class="book">
+        <h2>HOJAS CON CUADROS</h2>
+        <img class="img-fluid d-block mx-auto" src="assets/HOJAS/Hojas Cuadros.jpeg" alt="..." />
+        <button class="button" onclick="showInfo('HOJAS CON CUADROS', 'En Librer&iacute;a De Todo Un Poco', 'Las hojas con cuadros son hojas de papel que presentan un patrón de cuadros, generalmente utilizados para facilitar la escritura, el dibujo o la toma de notas. Son com&uacute;nmente empleadas en cuadernos y blocs de notas, ofreciendo una gu&iacute;a visual que ayuda a mantener la alineaci&oacute;n y organizaci&oacute;n del contenido.')">Ver Informaci&oacute;n</button>
+    </div>
+
+    <div class="book">
+        <h2>HOJAS CONTABLES DE 2 COLUMNAS</h2>
+        <img class="img-fluid d-block mx-auto" src="assets/HOJAS/Hoja 2 Columnas.jpeg" alt="..." />
+        <button class="button" onclick="showInfo('HOJAS CONTABLES DE 2 COLUMNAS', 'En Librer&iacute;a De Todo Un Poco', 'Las hojas contables de 2 columnas son documentos utilizados en contabilidad para registrar transacciones financieras. Se dividen en dos columnas: una para los d&eacute;bitos y otra para los cr&eacute;ditos. Esta estructura permite llevar un control claro y ordenado de las entradas y salidas de dinero, facilitando el balance de las cuentas.')">Ver Informaci&oacute;n</button>
+    </div>
+
+    <div class="book">
+        <h2>HOJAS CONTABLES DE 3 COLUMNAS</h2>
+        <img class="img-fluid d-block mx-auto" src="assets/HOJAS/Hoja 3 Columnas.jpeg" alt="..." />
+        <button class="button" onclick="showInfo('HOJAS CONTABLES DE 3 COLUMNAS', 'En Librer&iacute;a De Todo Un Poco', 'Las hojas contables de 3 columnas son documentos utilizados en la contabilidad para registrar transacciones financieras. Cada columna se destina a: **d&eacute;bitos**, **cr&eacute;ditos** y un **saldo** actualizado despu&eacute;s de cada operaci&oacute;n, facilitando el seguimiento del balance financiero.')">Ver Informaci&oacute;n</button>
+    </div>
+
+    <div class="book">
+        <h2>HOJAS CONTABLES DE 12 COLUMNAS</h2>
+        <img class="img-fluid d-block mx-auto" src="assets/HOJAS/Hoja 12 Columnas.jpeg" alt="..." />
+        <button class="button" onclick="showInfo('HOJAS CONTABLES DE 12 COLUMNAS', 'En Librer&iacute;a De Todo Un Poco', 'Las **hojas contables de 12 columnas** son plantillas utilizadas en contabilidad para registrar y organizar informaci&oacute;n financiera. Est&aacute;n divididas en 12 columnas que permiten clasificar datos como d&eacute;bitos, cr&eacute;ditos, saldo, ingresos, egresos y otros conceptos contables. Se usan com&uacute;nmente para realizar ajustes, balances y registros detallados en procesos contables.')">Ver Informaci&oacute;n</button>
+    </div>
+
+    <div class="book">
+        <h2>HOJAS DE PAPEL BOND TAMAÑO CARTA</h2>
+        <img class="img-fluid d-block mx-auto" src="assets/HOJAS/Papel Bond Carta.jpeg" alt="..." />
+        <button class="button" onclick="showInfo('HOJAS DE PAPEL BOND TAMAÑO CARTA', 'En Librer&iacute;a De Todo Un Poco', 'Las hojas de papel bond tamaño carta son hojas de papel de alta calidad, generalmente usadas para imprimir o escribir. Su tamaño est&aacute;ndar es de 21.59 cm x 27.94 cm (8.5 x 11 pulgadas).')">Ver Informaci&oacute;n</button>
+    </div>
+
+    <div class="book">
+        <h2>HOJAS DE PAPEL BOND TAMAÑO OFICIO</h2>
+        <img class="img-fluid d-block mx-auto" src="assets/HOJAS/Papel Bond Oficio.jpeg" alt="..." />
+        <button class="button" onclick="showInfo('HOJAS DE PAPEL BOND TAMAÑO OFICIO', 'En Librer&iacute;a De Todo Un Poco', 'Las hojas de papel bond tamaño oficio son hojas de papel de alta calidad, usadas com&uacute;nmente para documentos y correspondencia, con medidas de 216 x 356 mm (8.5 x 14 pulgadas).')">Ver Informaci&oacute;n</button>
+    </div>
+
+    <div class="book">
+        <h2>HOJAS CON M&Aacute;RGENES DECORATIVOS</h2>
+        <img class="img-fluid d-block mx-auto" src="assets/HOJAS/Con márgenes.jpeg" alt="..." />
+        <button class="button" onclick="showInfo('HOJAS CON M&Aacute;RGENES', 'En Librer&iacute;a De Todo Un Poco', 'Las hojas con m&aacute;rgenes decorativos son p&aacute;ginas de papel que presentan bordes ornamentales o ilustraciones en los m&aacute;rgenes, añadiendo un toque est&eacute;tico y creativo al contenido escrito. Se utilizan com&uacute;nmente en documentos, invitaciones, y presentaciones para realzar su apariencia visual.')">Ver Informaci&oacute;n</button>
+    </div>
+
+    <div class="book">
+        <h2>HOJAS DE 120 GRAMOS</h2>
+        <img class="img-fluid d-block mx-auto" src="assets/HOJAS/120 gramos.jpeg" alt="..." />
+        <button class="button" onclick="showInfo('HOJAS DE 120 GRAMOS', 'En Librer&iacute;a De Todo Un Poco', 'Las hojas de 120 gramos son un tipo de papel que tiene un peso de 120 gramos por metro cuadrado (g/m²). Este gramaje indica que el papel es más grueso y resistente que el papel est&aacute;ndar de 80 g/m², lo que lo hace ideal para imprimir documentos de calidad, tarjetas, portafolios y materiales que requieren mayor durabilidad y presentación.')">Ver Informaci&oacute;n</button>
+    </div>
+
+    <div class="book">
+        <h2>HOJAS DE PAPEL TAMAÑO A3</h2>
+        <img class="img-fluid d-block mx-auto" src="assets/HOJAS/A3.jpeg" alt="..." />
+        <button class="button" onclick="showInfo('HOJAS DE PAPEL TAMAÑO A3', 'En Librer&iacute;a De Todo Un Poco', 'El tamaño A3 es una medida de papel que mide 297 mm de ancho por 420 mm de alto (11.7 x 16.5 pulgadas). Es com&uacute;nmente utilizado para impresiones de posters, diagramas y presentaciones, ofreciendo un espacio mayor que el tamaño A4.')">Ver Informaci&oacute;n</button>
+    </div>
+
+    <div id="book-info">
+        <h2 id="book-title"></h2>
+        <p id="book-author"></p>
+        <p id="book-description"></p>
+        <button class="close-button" onclick="closeInfo()">Cerrar</button>
+    </div>
+
+    <script>
+        function showInfo(title, author, description) {
+            document.getElementById('book-title').innerText = title;
+            document.getElementById('book-author').innerText = 'Autor: ' + author;
+            document.getElementById('book-description').innerText = description;
+            document.getElementById('book-info').style.display = 'block';
+        }
+
+        function closeInfo() {
+            document.getElementById('book-info').style.display = 'none';
+        }
+    </script>
+</body>
+</html>

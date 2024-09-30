@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>L&Aacute;PICEROS</title>
+    <link rel="icon" type="image/x-icon" href="assets/HTML ICON.png" />
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #1c1c1c;
+            color: #f0f0f0;
+            margin: 0;
+            padding: 20px;
+        }
+        h1 {
+            text-align: center;
+            color:  #00f8f4;
+        }
+        .book {
+            background-color: #333;
+            padding: 10px;
+            margin: 15px 0;
+            border-radius: 5px;
+        }
+        .button {
+            background-color:  #6124ed;
+            border: none;
+            color: white;
+            padding: 10px 15px;
+            text-align: center;
+            font-size: 16px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .button:hover {
+            background-color: #00f8f4;
+        }
+        #book-info {
+            display: none;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: #222;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+        }
+        #book-info p {
+            margin: 0 0 15px;
+        }
+        .close-button {
+            background-color: #6124ed;
+            border: none;
+            color: white;
+            padding: 10px;
+            border-radius: 5px;
+            cursor: pointer;
+            display: block;
+            margin: 0 auto;
+        }
+    </style>
+</head>
+<body>
+    <h1>L&Aacute;PICEROS</h1>
+    <h2>Amplia selecci&oacute;n de l&aacute;piceros ergon&oacute;micos y de alta calidad, perfectos para escribir con comodidad y precisi&oacute;n. ¡Ideales para escuela, oficina o uso diario!</h2>
+
+    <div class="pen">
+        <h2>L&Aacute;PICEROS MARCA BIC</h2>
+        <img class="img-fluid d-block mx-auto" src="assets/Lápiceros/bic.jpeg" alt="..." />
+        <button class="button" onclick="showInfo('L&Aacute;PICEROS MARCA BIC','En Librer&iacute;a De Todo Un Poco','Aprovecha nuestra oferta de l&aacute;piceros BIC, conocidos por su calidad y escritura fluida. Ideales para el uso diario, con tinta duradera y un diseño c&oacute;modo. ¡Perfectos para la escuela, oficina o el hogar!')">Ver Informaci&oacute;n</button>
+    </div>
+
+    <div class="book">
+        <h2>L&Aacute;PICEROS MARCA PENTEL</h2>
+        <img class="img-fluid d-block mx-auto" src="assets/Lápiceros/pentel.jpeg" alt="..." />
+        <button class="button" onclick="showInfo('L&Aacute;PICEROS MARCA PENTEL', 'En Librer&iacute;a De Todo Un Poco','L&aacute;piceros de alta calidad con escritura suave y precisa. Ideales para estudiantes, profesionales y creativos que buscan durabilidad y rendimiento en cada trazo. ¡No te los pierdas!')">Ver Informaci&oacute;n</button>
+    </div>
+
+    <div class="book">
+        <h2>L&Aacute;PICEROS MARCA PAPER MATE</h2>
+        <img class="img-fluid d-block mx-auto" src="assets/Lápiceros/paper_mate.jpeg" alt="..." />
+        <button class="button" onclick="showInfo('L&Aacute;PICEROS MARCA PAPER MATE', 'En Librer&iacute;a De Todo Un Poco', 'Escritura suave y precisa con diseño ergon&oacute;mico. Ideales para el uso diario, combinan comodidad y durabilidad, perfectos para estudiantes y profesionales.')">Ver Informaci&oacute;n</button>
+    </div>
+
+    <div class="book">
+        <h2>L&Aacute;PICEROS MARCA COLOR PEN</h2>
+        <img class="img-fluid d-block mx-auto" src="assets/Lápiceros/color_pen.jpeg" alt="..." />
+        <button class="button" onclick="showInfo('L&Aacute;PICEROS MARCA COLOR PEN', 'En Librer&iacute;a De Todo Un Poco', 'L&aacute;piceros de alta calidad con tinta suave y fluida, disponibles en una variedad de colores vibrantes. Perfectos para escribir, dibujar o subrayar con estilo. ¡Aprovecha esta oferta y dale color a tus ideas!')">Ver Informaci&oacute;n</button>
+    </div>
+
+    <div class="book">
+        <h2>CRAYONES MARCA TUCAN</h2>
+        <img class="img-fluid d-block mx-auto" src="assets/Lápiceros/crayones_tucan.jpeg" alt="..." />
+        <button class="button" onclick="showInfo('CRAYONES MARCA TUCAN', 'En Librer&iacute;a De Todo Un Poco', 'Colores vibrantes y de alta calidad, perfectos para dibujos creativos. Suave deslizamiento y f&aacute;cil de usar, ideal para niños y artistas.')">Ver Informaci&oacute;n</button>
+    </div>
+
+    <div class="book">
+        <h2>CRAYONES MARCA CRAYOLA</h2>
+        <img class="img-fluid d-block mx-auto" src="assets/Lápiceros/crayola.jpeg" alt="..." />
+        <button class="button" onclick="showInfo('CRAYONES MARCA CRAYOLA', 'En Librer&iacute;a De Todo Un Poco', 'Descubre la calidad y viveza de los colores Crayola. Ideales para niños y adultos, perfectos para proyectos escolares, art&iacute;sticos y manualidades. ¡Colores brillantes y duraderos a precios incre&iacute;bles!')">Ver Informaci&oacute;n</button>
+    </div>
+
+    <div class="book">
+        <h2>CRAYONES MARCA MAPED</h2>
+        <img class="img-fluid d-block mx-auto" src="assets/Lápiceros/maped.jpeg" alt="..." />
+        <button class="button" onclick="showInfo('CRAYONES MARCA MAPED', 'En Librer&iacute;a De Todo Un Poco', 'Crayones de alta calidad, vibrantes y duraderos. Perfectos para dar vida a tus dibujos y proyectos creativos. ¡Aprovecha nuestra oferta especial y lleva color a tus ideas!')">Ver Informaci&oacute;n</button>
+    </div>
+
+    <div class="book">
+        <h2>CRAYONES MARCA BACOIRIS</h2>
+        <img class="img-fluid d-block mx-auto" src="assets/Lápiceros/bacoiris.jpeg" alt="..." />
+        <button class="button" onclick="showInfo('CRAYONES MARCA BACOIRIS', 'En Librer&iacute;a De Todo Un Poco', 'Crayones de alta calidad con colores vibrantes y duraderos. Ideales para artistas y estudiantes, ofrecen un trazo suave y una excelente cobertura en cualquier proyecto creativo. ¡Haz volar tu imaginaci&oacute;n con BACOIRIS!')">Ver Informaci&oacute;n</button>
+    </div>
+
+    <div class="book">
+        <h2>CRAYONES MARCA PRISMACOLOR</h2>
+        <img class="img-fluid d-block mx-auto" src="assets/Lápiceros/prismacolor.jpeg" alt="..." />
+        <button class="button" onclick="showInfo('CRAYONES MARCA PRISMACOLOR', 'En Librer&iacute;a De Todo Un Poco', 'Crayones de alta calidad con pigmentos vibrantes y suaves, perfectos para artistas y creativos. Ofrecen una amplia gama de colores y una excelente mezcla para lograr efectos sorprendentes.')">Ver Informaci&oacute;n</button>
+    </div>
+
+    <div class="book">
+        <h2>CRAYONES MARCA MULTICOLOR</h2>
+        <img class="img-fluid d-block mx-auto" src="assets/Lápiceros/multicolor.jpeg" alt="..." />
+        <button class="button" onclick="showInfo('CRAYONES MARCA MULTICOLOR', 'En Librer&iacute;a De Todo Un Poco', 'Caja de crayones vibrantes y de alta calidad, perfectos para colorear con precisi&oacute;n. Ideales para niños y artistas, ofrecen una amplia gama de colores intensos y duraderos.')">Ver Informaci&oacute;n</button>
+    </div>
+
+    <div class="book">
+        <h2>CRAYONES MARCA FAST</h2>
+        <img class="img-fluid d-block mx-auto" src="assets/Lápiceros/fast.jpeg" alt="..." />
+        <button class="button" onclick="showInfo('CRAYONES MARCA FAST', 'En Librer&iacute;a De Todo Un Poco', 'Colores vibrantes y de alta calidad. Perfectos para dibujos creativos y proyectos escolares. ¡Duraderos, seguros y f&aacute;ciles de usar!')">Ver Informaci&oacute;n</button>
+    </div>
+
+    <div id="book-info">
+        <h2 id="book-title"></h2>
+        <p id="book-author"></p>
+        <p id="book-description"></p>
+        <button class="close-button" onclick="closeInfo()">Cerrar</button>
+    </div>
+
+    <script>
+        function showInfo(title, author, description) {
+            document.getElementById('book-title').innerText = title;
+            document.getElementById('book-author').innerText = 'Autor: ' + author;
+            document.getElementById('book-description').innerText = description;
+            document.getElementById('book-info').style.display = 'block';
+        }
+
+        function closeInfo() {
+            document.getElementById('book-info').style.display = 'none';
+        }
+    </script>
+</body>
+</html>
